@@ -52,3 +52,18 @@ form {
     color:red;
     font-weight: bold;
  }
+.validation {
+  background-color: red;
+  color:white;
+  margin-top: 7px;
+  padding-top: 5px;
+  padding-bottom:5px;
+  font-weight: bold;
+}
+#formOn{
+  background-color: green;
+  cursor: pointer;
+}
+ #formOff {
+  background-color: red;
+ }

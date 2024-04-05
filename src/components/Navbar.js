@@ -37,5 +37,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
-//react-scripts start

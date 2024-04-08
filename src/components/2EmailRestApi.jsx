@@ -26,13 +26,13 @@ const schema = yup.object().shape({
       .matches(/^[a-zA-Z\s]+$/, 'Name can only contain letters and spaces')
       .test('two-words', 'Please enter both first name and last name', (value) => {
         const names = value.trim().split(' ');
-        return names.length === 2;
+        return names.length === 2 || names.length === 3;
       }),
     email: yup.string().email().required('Your email is required'),
     message: yup
     .string()
     .required('A message is required')
-    .min(10, 'Message must be at least 10 characters')
+    .min(8, 'Message must be at least 10 characters')
     .max(200, 'Message cannot exceed 200 characters'),
   });
 
@@ -53,8 +53,8 @@ const EmailRestApi = () => {
 
    const [values, setValues] = useState(getInitialValues());
    const [errors, setErrors] = useState(getInitialErrors())
-   const [serverSuccess, setServerSuccess] = useState();
-   const [serverFailure, setServerFailure] = useState();
+   //const [serverSuccess, setServerSuccess] = useState();
+   //const [serverFailure, setServerFailure] = useState();
    const [formEnabled, setFormEnabled] = useState(false);
 
    useEffect(()=>{
@@ -134,7 +134,7 @@ const EmailRestApi = () => {
               >
             </textarea>
            {errors.message && <div className='validation'>{errors.message}</div>}
-           <input id={formEnabled ? "formOn" : "formOff"} disabled={!formEnabled} type='submit'/>
+           <button id={formEnabled ? "formOn" : "formOff"} disabled={!formEnabled} type='submit'>Submit</button>
            </form>
     </div>
   );

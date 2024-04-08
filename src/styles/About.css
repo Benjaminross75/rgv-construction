@@ -7,7 +7,7 @@
 
   .aboutTop {
     width: 100%;
-    height: 45%;
+    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,9 +17,11 @@
   .aboutBottom {
     display: flex;
     flex-direction: column;
-    height: 55%;
+    height: 65%;
+    width:100%;
     align-items: center;
     margin-top: 50px;
+
   }
 
   .aboutBottom p {
@@ -36,3 +38,70 @@
     transform: translateY(-40px);
   }
 
+.aboutus1 {
+  color: rgb(105, 99, 99)
+}
+
+.aboutus2 {
+  color: rgb(105, 99, 99);
+  margin-bottom: 20px;
+}
+
+/* @media only screen and (max-width: 650px){
+  .about {
+   justify-content: center;
+   align-items: center;
+  height:auto
+  }
+}
+
+@media only screen and (max-width: 650px){
+  .aboutBottom {
+   justify-content: center;
+   align-items: center;
+
+  }
+
+  .aboutus1 {
+    justify-content: center;
+    align-items: center;
+    max-width: fit-content;
+    word-wrap: break-word;
+  }
+
+  .aboutus2 {
+    justify-content: center;
+    align-items: center;
+    max-width: fit-content;
+    word-wrap: break-word;
+  }
+} */
+
+
+@media only screen and (max-width: 650px){
+  .about {
+   justify-content: center;
+   align-items: center;
+  height:auto
+  }
+
+ .aboutBottom {
+   justify-content: center;
+   align-items: center;
+
+  }
+
+  .aboutus1 {
+    justify-content: center;
+    align-items: center;
+    max-width: fit-content;
+    word-wrap: break-word;
+  }
+
+  .aboutus2 {
+    justify-content: center;
+    align-items: center;
+    max-width: fit-content;
+    word-wrap: break-word;
+  }
+}
